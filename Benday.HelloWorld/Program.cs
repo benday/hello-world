@@ -1,17 +1,21 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Benday.HelloWorld.Api;
 
-namespace Benday.HelloWorld
+namespace Benday.HelloWorld;
+
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
+        WriteLine("Hello, World!");
 
-            IMessageProvider provider = new DateTimeInfoProvider();
+        IMessageProvider provider = new DateTimeInfoProvider();
 
-            Console.WriteLine(provider.GetMessage());
-        }
+        WriteLine(provider.GetMessage());
+    }
+
+    public static void WriteLine(string message)
+    {
+        Console.WriteLine(message);
     }
 }
