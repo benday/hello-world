@@ -10,8 +10,12 @@ class Program
         WriteLine("Hello, World!");
 
         IMessageProvider provider = new DateTimeInfoProvider();
+        ILuckyNumberProvider numberProvider = new DateTimeInfoProvider();
 
-        WriteLine(provider.GetMessage());
+        int luckyNumber = numberProvider.GetLuckyNumber();
+
+        WriteLine($"{provider.GetMessage()} -- btw, the lucky number is {luckyNumber}");
+
     }
 
     public static void WriteLine(string message)
