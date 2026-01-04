@@ -4,8 +4,11 @@ using Benday.HelloWorld.Api;
 Console.WriteLine("Hello, World!");
 
 IMessageProvider provider = new DateTimeInfoProvider();
+ILuckyNumberProvider numberProvider = new DateTimeInfoProvider();
 
 string message = provider.GetMessage();
 
-Console.WriteLine(message);
+int luckyNumber = numberProvider.GetLuckyNumber();
+
+Console.WriteLine($"{message} -- btw, the lucky number is {luckyNumber}");
 
