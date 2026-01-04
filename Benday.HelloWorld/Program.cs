@@ -5,7 +5,4 @@ Console.WriteLine("Hello, World!");
 
 IMessageProvider provider = new DateTimeInfoProvider();
 
-string message = provider.GetMessage();
-
-Console.WriteLine(message);
-
+Console.WriteLine(provider.GetMessage());
