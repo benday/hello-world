@@ -7,7 +7,10 @@ class Program
 {
     static void Main(string[] args)
     {
+        // this is a comment
         WriteLine("Hello, World!");
+
+        WriteLine(string.Empty);
 
         IMessageProvider provider = new DateTimeInfoProvider();
         ILuckyNumberProvider numberProvider = new DateTimeInfoProvider();
