@@ -12,13 +12,12 @@ class Program
 
         WriteLine(string.Empty);
 
-        IMessageProvider provider = new DateTimeInfoProvider();
-        ILuckyNumberProvider numberProvider = new DateTimeInfoProvider();
+        var provider = new DateTimeInfoProvider();
+        var numberProvider = new DateTimeInfoProvider();
 
-        int luckyNumber = numberProvider.GetLuckyNumber();
+        var luckyNumber = numberProvider.GetLuckyNumber();
 
         WriteLine($"{provider.GetMessage()} -- btw, the lucky number is {luckyNumber}");
-
     }
 
     public static void WriteLine(string message)
