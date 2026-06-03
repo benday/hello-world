@@ -15,7 +15,9 @@ class Program
         var provider = new DateTimeInfoProvider();
         var numberProvider = new DateTimeInfoProvider();
 
-        var luckyNumber = numberProvider.GetLuckyNumber();
+        const int MaxLuckyNumber = 100;
+
+        var luckyNumber = numberProvider.GetLuckyNumber(MaxLuckyNumber);
 
         WriteLine($"{provider.GetMessage()} -- btw, the lucky number is {luckyNumber}");
     }
