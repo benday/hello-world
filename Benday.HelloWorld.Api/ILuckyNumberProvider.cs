@@ -4,5 +4,5 @@ namespace Benday.HelloWorld.Api;
 
 public interface ILuckyNumberProvider
 {
-    int GetLuckyNumber();
+    int GetLuckyNumber(int max);
 }
